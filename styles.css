@@ -1,66 +1,88 @@
-/* Resetting default browser styles */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body */
+/* Body Styling */
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f5f7fa;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fc;
     color: #333;
     line-height: 1.6;
     font-size: 16px;
 }
 
-/* Global Styles */
+/* Anchor Links */
 a {
     text-decoration: none;
     color: inherit;
 }
 
-/* Header Section */
+/* Header */
 header {
-    background: linear-gradient(135deg, #2980b9, #6dd5ed);
+    background: linear-gradient(to right, #4facfe, #00f2fe);
     color: #fff;
-    padding: 80px 0;
     text-align: center;
+    padding: 80px 0;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 }
 
 header h1 {
     font-size: 3.5rem;
-    margin-bottom: 20px;
     font-weight: 700;
     letter-spacing: 2px;
 }
 
 header p {
     font-size: 1.5rem;
-    margin-bottom: 30px;
+    margin: 20px 0 30px;
+    font-weight: 300;
 }
 
 header nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
+    margin-top: 20px;
 }
 
 header nav ul li {
-    margin: 0 25px;
+    margin: 0 15px;
 }
 
 header nav ul li a {
     color: #fff;
-    font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 5px 10px;
     transition: all 0.3s ease;
 }
 
 header nav ul li a:hover {
-    color: #ecf0f1;
-    text-decoration: underline;
+    color: #dff9fb;
+    border-bottom: 2px solid #fff;
+}
+
+/* Section Titles */
+.section h2 {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    color: #4facfe;
+    position: relative;
+}
+
+.section h2::after {
+    content: '';
+    width: 80px;
+    height: 3px;
+    background: #4facfe;
+    display: block;
+    margin: 10px auto;
 }
 
 /* About Section */
@@ -68,61 +90,58 @@ header nav ul li a:hover {
     display: flex;
     align-items: center;
     gap: 40px;
-    margin-top: 40px;
-    padding: 60px 0;
+    margin: 60px auto;
+    padding: 60px 40px;
     background: #fff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
 .profile-image {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
-    border: 5px solid #2980b9;
+    border: 5px solid #4facfe;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
-.about-text h2 {
-    font-size: 2.8rem;
-    margin-bottom: 20px;
-    font-weight: 600;
+.about-text {
+    flex: 1;
 }
 
 .about-text p {
     font-size: 1.2rem;
-    color: #34495e;
-    margin-bottom: 20px;
+    color: #57606f;
+    margin-bottom: 15px;
     line-height: 1.8;
 }
 
 /* Skills Section */
 .skills-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
-    margin-top: 50px;
+    margin: 40px 0;
+    padding: 20px;
 }
 
 .skill-card {
-    background-color: #fff;
+    background: #fff;
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-    width: 30%;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .skill-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 .skill-card h3 {
     font-size: 1.8rem;
+    color: #4facfe;
     margin-bottom: 15px;
-    color: #2980b9;
 }
 
 .skill-card ul {
@@ -132,90 +151,56 @@ header nav ul li a:hover {
 .skill-card ul li {
     font-size: 1.2rem;
     margin-bottom: 10px;
-    color: #7f8c8d;
+    color: #57606f;
 }
 
 /* Projects Section */
 .project-card {
-    background-color: #fff;
+    background: #fff;
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-    margin-bottom: 40px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .project-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 .project-card h3 {
     font-size: 2rem;
-    color: #2980b9;
+    color: #4facfe;
     margin-bottom: 20px;
 }
 
 .project-card p {
     font-size: 1.2rem;
-    color: #7f8c8d;
-}
-
-.project-image {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-/* Experience Section */
-.experience-card {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-    margin-bottom: 40px;
-}
-
-.experience-card h3 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-    color: #2980b9;
-}
-
-.experience-card p {
-    font-size: 1.2rem;
-    color: #7f8c8d;
+    color: #57606f;
 }
 
 /* Contact Form */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    margin-top: 30px;
-}
-
 form input,
 form textarea {
-    padding: 14px;
-    font-size: 1.1rem;
-    border: 2px solid #bdc3c7;
+    padding: 15px;
+    font-size: 1rem;
+    border: 1px solid #bdc3c7;
     border-radius: 8px;
+    margin-bottom: 20px;
     background-color: #fff;
-    transition: border 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 form input:focus,
 form textarea:focus {
-    border: 2px solid #2980b9;
+    border: 1px solid #4facfe;
     outline: none;
 }
 
 form button {
-    background-color: #2980b9;
+    background-color: #4facfe;
     color: #fff;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     padding: 14px;
     border: none;
     border-radius: 8px;
@@ -224,7 +209,7 @@ form button {
 }
 
 form button:hover {
-    background-color: #3498db;
+    background-color: #00f2fe;
 }
 
 /* Footer */
@@ -233,20 +218,21 @@ footer {
     color: #fff;
     padding: 40px 0;
     text-align: center;
+    clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%);
 }
 
 footer p {
     font-size: 1rem;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 footer .social a {
     color: #fff;
-    margin: 0 20px;
-    font-size: 1.3rem;
+    margin: 0 15px;
+    font-size: 1.5rem;
     transition: color 0.3s ease;
 }
 
 footer .social a:hover {
-    color: #2980b9;
+    color: #4facfe;
 }
